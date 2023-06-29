@@ -1,0 +1,52 @@
+.desktopcont{
+    display:flex;
+    flex-direction: row;
+    height:50.696969px;
+    background-color: #1f2630;
+    justify-content: space-between;
+}
+
+.dtitle{
+    font-family: gidole;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    align-self: center;
+    text-align: center;
+    width:100%;
+}
+
+.dweb3{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color:#32e22c;
+    padding-right:10px;
+    width:100%;
+}
+
+.mm:hover{
+    cursor:pointer;
+    opacity:0.769
+}
+
+.connectionstatus{
+    font-family: simpla;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display:flex;
+    font-size: 20px;
+    width:100%;
+    height: 50.696969px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left:10px;
+}
+
+.connected{
+    color:#32e22c;
+}
+
+.disconnected{
+    color:#f43c3c;
+}

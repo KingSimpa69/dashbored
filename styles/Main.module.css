@@ -1,0 +1,141 @@
+.body{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height:calc(100vh - 50.7px);
+    width:100vw;
+    overflow:
+}
+
+.statboxcont{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.statbox{
+    margin-bottom: 10px;
+    display:flex;
+    flex-direction: column;
+    background-color: #1f2630;
+    border:0px solid #ffffff;
+    width:420px;
+    min-width: 250.69px;
+    max-width: 24%;
+}
+
+.statboxtitlecont{
+    font-family: gidole;
+    text-transform: uppercase;
+    padding:10px 20px;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px #313233 solid;
+}
+
+.statboxtitlecont :nth-child(2){
+    width:20px;
+    height:20px;
+}
+
+.statboxstats{
+    font-family: fjalla;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 1px;
+    display:flex;
+    flex-direction: row;
+    padding-left:20px;
+    padding-top:10px;
+    font-size: 20px;
+}
+
+.statboxdesc{
+    font-family: quicksand;
+    letter-spacing: 1px;
+    display:flex;
+    flex-direction: row;
+    padding-top:10px;
+    padding-left:20px;
+    padding-bottom:10px;
+    font-size: 12px;
+    color:#c6c6c6;
+}
+
+.mayocont{
+    display:flex;
+    justify-content: space-around;
+    margin-top:10px;
+}
+
+.accountInfoMayonnaise{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:99%;
+    background-color: #1f2630;
+}
+
+.addybox{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    border-bottom: 1px solid #313233;
+    font-family: quicksand;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.addybox:hover{
+    background-color: #222a34;
+    cursor: pointer;
+}
+
+.infobox{
+    font-family: fjalla;
+    font-variant-numeric: tabular-nums;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width:25%;
+    height:63px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.infoboxdesc{
+    font-family: quicksand;
+    letter-spacing: 1px;
+    padding-top:5px;
+    padding-bottom:5px;
+    font-size: 12px;
+    color:#c6c6c6;
+}
+
+.borderleft{
+    border-left: 1px solid #313233;
+}
+
+.hidden{
+    display:none;
+}
+
+.chartcont{
+    display: flex;
+    flex:1;
+    justify-content: center;
+}
+
+.pricechart{
+    display:flex;
+    height:100%;
+    width:99%;
+    padding-bottom:5px;
+}
