@@ -5,6 +5,8 @@
     height:calc(100vh - 50.7px);
     width:100vw;
     margin-top:50.696969px;
+    position: fixed;
+    bottom: 0;
 }
 
 .statboxcont{
