@@ -2,11 +2,11 @@
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height:calc(100vh - 50.7px);
-    width:100vw;
-    margin-top:50.696969px;
     position: fixed;
+    top: 50.6969px;
     bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 .statboxcont{
