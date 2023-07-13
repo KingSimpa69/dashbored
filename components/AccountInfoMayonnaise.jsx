@@ -3,6 +3,9 @@ import { useState, useEffect } from "react"
 import { formatEther,parseEther } from "ethers";
 import { Contract } from "ethers";
 import PEPE from "../abi/PEPE.json"
+import { formatEth } from "@/utils/formatEth";
+import { formatPepe } from "@/utils/formatPepe";
+import { shortenEthAddy } from "@/utils/shortenEthAddy";
 import { delay } from "@/utils/delay";
 
 export const AccountInfoMayonnaise = ({web3, viewPort, ethPrice, pepeUsd}) => {
@@ -13,28 +16,28 @@ const formatter = new Intl.NumberFormat('en-US', {
     minimumFractionDigits: 2
 });
 
-const [expanded,setExpandeded] = useState(false);
+const [expanded,setExpanded] = useState(true);
 const [ethBalance,setEthBalance] = useState(0)
 const [ethValue,setEthValue] = useState(0)
 const [pepeBalance,setPepeBalance] = useState(0)
 const [pepeValue,setPepeValue] = useState(0)
-const [css0,modCSS0] = useState("")
-const [css1,modCSS1] = useState("hidden")
 
-const setExpanded = async (bool) => {
-    if (bool === true){
-        setExpandeded(bool)
-        modCSS1("infobox")
-        modCSS0("animate__animated animate__fadeInDown animate__faster")
-        await delay(200)
-        modCSS0("")
-    } else {
-        setExpandeded(bool)
-        modCSS0("animate__animated animate__fadeOutUp animate__faster")
-        await delay(200)
-        modCSS1("hidden")
+const [css1, setCss1] = useState("hidden");
+const [css2, setCss2] = useState("");
+
+const showHide = (closed) => {
+    if (closed) {
+      setCss1("");
+      setCss2("animate__animated animate__fadeInDown animate__faster");
     }
-}
+
+    if (!closed) {
+      setCss2("animate__animated animate__fadeOutUp animate__faster");
+      setTimeout(() => {
+        setCss1("hidden");
+      }, "420");
+    }
+  };
 
 // Get ETH account info
 
@@ -70,23 +73,27 @@ useEffect(()=>{
     getPepeBalance()
 },[pepeUsd])
 
+useEffect(()=>{
+    showHide(!expanded)
+},[expanded])
+
 return(
     <div className={styles.mayocont}>
     <div className={styles.accountInfoMayonnaise}>
-      <div onClick={()=>{setExpanded(!expanded)}} className={styles.addybox}>{web3.address}</div>
-      <div className={`${css0} ${styles[css1]} ${styles.borderright}`}>
-        {ethBalance} ETH
+      <div onClick={()=>{setExpanded(!expanded)}} className={styles.addybox}>{viewPort === "phone" ? shortenEthAddy(web3.address) : web3.address}</div>
+      <div className={`${styles.infobox} ${styles.borderright} ${styles[css1]} ${css2}`}>
+        {formatEth(ethBalance)} ETH
         <p className={styles.infoboxdesc}>Balance</p>
       </div>
-      <div className={`${css0} ${styles[css1]} ${styles.borderleft}`}> 
+      <div className={`${styles.infobox} ${styles.borderleft} ${styles[css1]} ${css2}`}> 
         {ethValue}
         <p className={styles.infoboxdesc}>Value</p>
       </div>
-      <div className={`${css0} ${styles[css1]} ${styles.borderleft}`}>
-        {pepeBalance.toLocaleString()} PEPE
+      <div className={`${styles.infobox} ${styles.borderleft} ${styles[css1]} ${css2}`}>
+        {formatPepe(pepeBalance)} PEPE
         <p className={styles.infoboxdesc}>Balance</p>
       </div>
-      <div className={`${css0} ${styles[css1]} ${styles.borderleft}`}>
+      <div className={`${styles.infobox} ${styles.borderleft} ${styles[css1]} ${css2}`}>
         {pepeValue}
         <p className={styles.infoboxdesc}>Value</p>
       </div>

@@ -22,7 +22,6 @@ export default () => ({
             throw new Error('Failed to fetch bars');
           }
           const data = await response.json();
-          console.log(data)
           const queryType = resolution === "1D" ? "tokenDayDatas" :
           resolution === "60" || "120" || "240" || "480" || "720" ? "tokenHourDatas" : null
           const resoType = resolution === "1D" ? "date" :
@@ -37,7 +36,6 @@ export default () => ({
           if (modifiedData.length > 0) {
             onHistoryCallback(modifiedData, {noData: false})
           } else {
-            console.log(data);
             onHistoryCallback(modifiedData, {noData: true})
           }
         } catch (error) {

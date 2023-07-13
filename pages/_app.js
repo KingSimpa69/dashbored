@@ -6,8 +6,9 @@ import { MetaAf } from '@/components/Head'
 import {useWindowSize} from "../hooks/useWindowSize"
 import { DesktopNav } from "../components/nav/index"
 const { library, config } = require('@fortawesome/fontawesome-svg-core');
-import { faDollarSign, faPeopleCarryBox, faBuildingColumns, faPeopleGroup } from '@fortawesome/free-solid-svg-icons'
-library.add(faDollarSign,faPeopleCarryBox, faBuildingColumns, faPeopleGroup)
+import { faDollarSign, faPeopleCarryBox, faBuildingColumns, faPeopleGroup, faBars, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedinIn, faTwitter, faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons' 
+library.add(faDollarSign,faPeopleCarryBox, faBuildingColumns, faPeopleGroup, faBars, faLinkedinIn, faTwitter, faDiscord, faGithub, faChevronUp, faChevronDown)
 config.autoAddCss = false;
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 

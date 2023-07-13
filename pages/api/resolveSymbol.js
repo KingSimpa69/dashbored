@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     minmov: 1,
     pricescale: 100000000,
     has_intraday: true,
-    has_no_volume: true,
+    visible_plots_set: true,
     has_weekly_and_monthly: false,
     supported_resolutions: ["60", "120", "240", "480", "720", "D",],
     data_status: 'streaming',

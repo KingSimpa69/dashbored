@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     height:calc(100vh - 50.7px);
     width:100vw;
-    overflow:
+    margin-top:50.696969px;
 }
 
 .statboxcont{
@@ -76,7 +76,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     width:99%;
-    background-color: #1f2630;
+    overflow:hidden;
 }
 
 .addybox{
@@ -89,6 +89,9 @@
     font-family: quicksand;
     padding-top:10px;
     padding-bottom:10px;
+    background-color: #1f2630;
+    position: relative;
+    z-index: 1;
 }
 
 .addybox:hover{
@@ -108,6 +111,9 @@
     height:63px;
     padding-top:5px;
     padding-bottom:5px;
+    position: relative;
+    background-color: #1f2630;
+    z-index: 0;
 }
 
 .infoboxdesc{
@@ -138,4 +144,38 @@
     height:100%;
     width:99%;
     padding-bottom:5px;
+}
+
+.mobilestatcont{
+    display:flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+    flex: 1 1;
+    background-color: #1f2630;
+    margin-bottom: 10.6969px;
+}
+
+.mobilestat{
+    font-family: fjalla;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 1px;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top:10px;
+    padding-bottom:10px;
+    min-width: 50%;
+}
+
+.mobilestatvalue{
+    margin-top:2.6969px;
+    font-family: quicksand;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #b3b2b2;
+    opacity: .6969;
 }

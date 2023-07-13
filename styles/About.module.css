@@ -1,0 +1,242 @@
+.body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 65.69px);
+    width: 100vw;
+    margin-top:55.696969px;
+}
+
+.rowa{
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+    width:calc(40vw - 2.5069px);
+}
+
+.rowb{
+    display:flex;
+    flex-direction: column;
+    width:calc(60vw - 2.5069px);
+}
+
+.inside{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin:5px;
+    min-height: calc(100vh - 70.69px);
+}
+
+.cont1{
+    display:flex;
+    flex-direction: column;
+    background-color: #1f2630;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1;
+}
+
+.cont0{
+    display:flex;
+    flex-direction: column;
+    background-color: #1f2630;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1;
+}
+
+
+.cont1:nth-child(2){
+    margin-top:10px;
+}
+
+.devcont{
+    display:flex;
+    flex: 1 1;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.devpanel{
+    display:flex;
+    flex-direction: column;
+    flex: 1 1;
+    width:50%;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1{
+    padding:15.42069px;
+    text-transform: uppercase;
+    font-family: gidole;
+    letter-spacing: 5.42069px;
+}
+
+.simpa{
+    position: relative;
+    z-index: 2;
+    object-fit: "contain";
+    width:169px;
+    height: 169px;
+    border-radius: 100%;
+    border: 0px none #ffffff;
+    overflow: hidden;
+    margin:3px;
+}
+
+.outline{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+    background-color: #171e26;
+    border-radius: 100%;
+    border: 0px none #ffffff;
+    margin:15px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden
+}
+
+.wutwedo{
+    font-family:quicksand;
+    height:100%;
+    width:100%;
+    background: #00000067;
+    backdrop-filter: blur(4.2069px);
+    position: absolute;
+    z-index: 3;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity:0;
+    transition: .269s ease;
+}
+
+.wutwedo:hover{
+    opacity:1;
+    cursor: default;
+}
+
+.devlinks{
+    font-family:quicksand;
+    margin-bottom:20px;
+    display:flex;
+    flex-direction: row;
+}
+
+.dlink{
+    color: #7ab0c1c9;
+    width:20px;
+    height:20px;
+    margin:6.96969px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dlink:hover{
+    cursor: pointer;
+    color: #b1c8cfc9;
+}
+
+.devname{
+    font-family: gidole;
+    font-weight: bold;
+    letter-spacing: 3.6969px;
+    margin-bottom:6px;
+}
+
+.stankylanks{
+    display:inline-flex;
+    flex:1 1;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height:50px;
+    padding-bottom:30px;
+}
+
+.stankylanks p{
+    text-transform: uppercase;
+    font-family: quicksand;
+    margin:7.42069px;
+    color: #7ab0c1c9;
+}
+
+.stankylanks p:hover{
+    color: #b1c8cfc9;
+    cursor: pointer;
+}
+
+.faqboxwrap{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1 1;
+    width:100%;
+    height:100%;
+    margin-top:10px;
+}
+
+.faqboxcont{
+    font-family: quicksand;
+    border: 0px solid #171e26;
+    border-radius: 5px;
+    width:96%;
+    margin:5px;
+    overflow:hidden;
+}
+
+.faqboxhead{
+    font-weight: bold;
+    padding:15px;
+    background-color: #171e26;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.faqboxfaq{
+    border: 2px solid #171e26;
+    background-color: #212a34;
+    padding:15px;
+    z-index: 0;
+    position: relative;
+    color: #d7d7d7;
+}
+
+.chevron{
+    width: 20px;
+}
+
+.hidden{
+    display:none;
+}
+
+@media only screen and (max-width: 1008px) {
+    .rowa{
+        display:flex;
+        flex-direction: column;
+        width:100vw;
+    }
+    
+    .rowb{
+        display:flex;
+        flex-direction: column;
+        width:100vw;
+
+    }
+    
+  }

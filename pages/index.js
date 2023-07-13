@@ -1,12 +1,12 @@
 import styles from "../styles/Main.module.css";
 import dynamic from 'next/dynamic';
 import react,{ useEffect,useState } from "react";
-import { StatBox } from "@/components/StatBox";
+import { DesktopStats } from "@/components/DesktopStats";
+import { MobileStats } from "@/components/MobileStats";
 import { AccountInfoMayonnaise } from "@/components/AccountInfoMayonnaise";
 import { useQuery } from "@apollo/client";
 import { GET_ETH_PRICE,GET_PEPE_PRICE } from "@/apollo";
 import { parseEther,formatEther } from "ethers";
-import { formatPepeUsd } from "@/utils/formatPepeUsd";
 import { Contract } from "ethers";
 import PEPE from "../abi/PEPE.json"
 const TVChartContainer = dynamic(
@@ -86,10 +86,8 @@ export default function Home({ viewPort,web3 }) {
     <div className={styles.body}>
       {web3.address ? <AccountInfoMayonnaise web3={web3} viewPort={viewPort} ethPrice={ethPrice} pepeUsd={pepeUsd} /> : null}
       <div className={styles.statboxcont}>
-        <StatBox type={"price"} value={formatPepeUsd(pepeUsd)}/>
-        <StatBox type={"supply"} value={supply.toLocaleString()}/>
-        <StatBox type={"marketcap"} value={formatter.format(marketcap)}/>
-        <StatBox type={"holders"} value={holders.toLocaleString()}/>
+        {viewPort !== "desktop" ? <MobileStats pepeUsd={pepeUsd} supply={supply} marketcap={marketcap} holders={holders}/> :
+        <DesktopStats pepeUsd={pepeUsd} supply={supply} marketcap={marketcap} holders={holders}/>}
       </div>
       <div className={styles.chartcont}>
         <TVChartContainer />
