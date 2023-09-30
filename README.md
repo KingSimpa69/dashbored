@@ -1,3 +1,9 @@
+**Notice**: The dashbored is no longer actively being developed as I simply do not have enough time to continue development. It's provided here for reference purposes, but I am not accepting new issues, pull requests, or updates. Please consider forking the repository if you would like to continue development.
+
+[![Maintenance Status](https://img.shields.io/badge/Maintenance-Abandoned-red.svg)](https://github.com/yourusername/your-repo)
+
+
+---
 # Pepe's Dash
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
